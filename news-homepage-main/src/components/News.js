@@ -24,19 +24,19 @@ const News = () => {
               people. But is it really fulfiling its promise
             </p>
 
-            <button className='md:py-2 md:px-4 bg-Soft-red text-white uppercase py-4 px-8 mb-4'>
+            <button className='md:py-2 md:px-4 bg-Soft-red text-white uppercase py-4 px-8 mb-4 hover:bg-Very-dark-blue'>
               Read More
             </button>
           </div>
         </div>
       </div>
-      <div className='news-sidebar bg-Very-dark-blue md:w-2/3  p-8 w-3/4 mx-auto mt-8'>
+      <div className='news-sidebar bg-Very-dark-blue md:w-2/3  p-8 w-3/4 mx-auto '>
         <div className='title'>
           <h2 className='text-Soft-orange text-3xl md:mb-4'>New</h2>
         </div>
 
         <div className='content py-4'>
-          <h3 className='text-Grayish-blue'>Hydrogen VS Electric Cars</h3>
+          <h3 className='text-Grayish-blue hover:text-Soft-orange'>Hydrogen VS Electric Cars</h3>
           <p className='text-Dark-grayish-blue'>
             Will hydrogen-fueles cars ever catch up to EVS
           </p>
@@ -45,7 +45,7 @@ const News = () => {
         <div className='border border-Dark-grayish-blue'></div>
 
         <div className='content py-4'>
-          <h3 className='text-Grayish-blue'>Hydrogen VS Electric Cars</h3>
+          <h3 className='text-Grayish-blue hover:text-Soft-orange'>Hydrogen VS Electric Cars</h3>
           <p className='text-Dark-grayish-blue'>
             Will hydrogen-fueles cars ever catch up to EVS
           </p>
@@ -54,7 +54,7 @@ const News = () => {
         <div className='border border-Dark-grayish-blue'></div>
 
         <div className='content py-4'>
-          <h3 className='text-Grayish-blue'>Hydrogen VS Electric Cars</h3>
+          <h3 className='text-Grayish-blue hover:text-Soft-orange'>Hydrogen VS Electric Cars</h3>
           <p className='text-Dark-grayish-blue'>
             Will hydrogen-fueles cars ever catch up to EVS
           </p>

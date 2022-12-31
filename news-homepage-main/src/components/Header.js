@@ -5,11 +5,6 @@ import Close from "../assets/images/icon-menu-close.svg";
 import Mobile from "../assets/images/image-web-3-mobile.jpg";
 
 const Header = () => {
-  const inneer = () => {
-    console.log(window.innerWidth);
-  };
-
-  inneer();
   return (
     <div className='header p-4'>
       <div className='navbar-mobile flex justify-between items-center lg:hidden'>
@@ -24,19 +19,19 @@ const Header = () => {
 
         <ul className='md:flex md:gap-8 '>
           <li>
-            <a>Home</a>
+            <a className='hover:text-Soft-red'>Home</a>
           </li>
           <li>
-            <a>New</a>
+            <a className='hover:text-Soft-red'>New</a>
           </li>
           <li>
-            <a>Popular</a>
+            <a className='hover:text-Soft-red'>Popular</a>
           </li>
           <li>
-            <a>Trending</a>
+            <a className='hover:text-Soft-red'>Trending</a>
           </li>
           <li>
-            <a>Caregories</a>
+            <a className='hover:text-Soft-red'>Caregories</a>
           </li>
         </ul>
       </div>
