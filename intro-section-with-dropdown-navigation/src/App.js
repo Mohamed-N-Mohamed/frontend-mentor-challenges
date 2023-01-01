@@ -8,34 +8,100 @@ import logo from "./images/logo.svg";
 import chevronDown from "./images/icon-arrow-down.svg";
 import chevronUp from "./images/icon-arrow-up.svg";
 import menueOpen from "./images/icon-menu.svg";
+import closeMenue from "./images/icon-close-menu.svg";
+import todoList from "./images/icon-todo.svg";
+import reminders from "./images/icon-reminders.svg";
+import planning from "./images/icon-planning.svg";
+import calander from "./images/icon-calendar.svg";
 import { useState } from "react";
 
 function App() {
-  const [click, setClick] = useState(false);
+  const [openFeatures, setOpenFeatures] = useState(false);
+  const [openCompany, setOpenCompany] = useState(false);
 
   const handleOnClick = () => {
     const navbar = document.querySelector(".navbar");
+    const menueButton = document.querySelector(".menu-button");
     navbar.classList.toggle("open");
+
+    if (navbar.classList.contains("open")) {
+      menueButton.src = closeMenue;
+    } else {
+      menueButton.src = menueOpen;
+    }
   };
   return (
     <>
       <header className='p-5 flex items-center justify-between'>
-        <div onClick={handleOnClick}>
-          <img src={logo} alt='logo image' />
+        <div
+          onClick={handleOnClick}
+          className='lg:flex lg:items-center lg:justify-start'
+        >
+          <img src={logo} alt='logo image' className='mr-5' />
           <nav className='navbar'>
             <div>
-              <button onClick={handleOnClick}>
-                Features <img src={chevronDown} alt='' />
+              <button
+                className='flex items-center justify-center'
+                onClick={() => setOpenFeatures(!openFeatures)}
+              >
+                Features{" "}
+                {openFeatures ? (
+                  <img src={chevronUp} alt='' className='ml-2' />
+                ) : (
+                  <img src={chevronDown} alt='' className='ml-2' />
+                )}
               </button>
+              {openFeatures && (
+                <ul className='mt-2 ml-3 lg:ml-0 lg:p-3 shadow'>
+                  <li className='flex items-center justify-start text-small mb-2'>
+                    <img src={todoList} alt='' classsname='mr-2' />
+                    Todo List
+                  </li>
+                  <li className='flex items-center justify-start text-small mb-2'>
+                    <img src={calander} alt='' classsname='mr-2' />
+                    Calander
+                  </li>
+                  <li className='flex items-center justify-start text-small mb-2'>
+                    <img src={reminders} alt='' classsname='mr-2' />
+                    Reminders
+                  </li>
+                  <li className='flex items-center justify-start text-small mb-2'>
+                    <img src={planning} alt='' classsname='mr-2' />
+                    Planning
+                  </li>
+                </ul>
+              )}
             </div>
 
             <div>
-              <button>
-                Company <img src={chevronUp} alt='' />
+              <button
+                className='flex items-center justify-center'
+                onClick={() => setOpenCompany(!openCompany)}
+              >
+                Company{" "}
+                {openCompany ? (
+                  <img src={chevronUp} alt='' className='ml-2' />
+                ) : (
+                  <img src={chevronDown} alt='' className='ml-2' />
+                )}
               </button>
+
+              {openCompany && (
+                <ul className='mt-2 ml-3 lg:ml-0 lg:p-3 shadow'>
+                  <li className='flex items-center justify-start text-small mb-2'>
+                    History
+                  </li>
+                  <li className='flex items-center justify-start text-small mb-2'>
+                    Out Team
+                  </li>
+                  <li className='flex items-center justify-start text-small mb-2'>
+                    Bog
+                  </li>
+                </ul>
+              )}
             </div>
 
-            <div>
+            <div className='mb-2 lg:mb-0'>
               <button>Careers</button>
             </div>
 
@@ -45,15 +111,15 @@ function App() {
           </nav>
         </div>
 
-        <div className=''>
+        <div className='lg:hidden'>
           <button>
-            <img src={menueOpen} alt='' />
+            <img src={menueOpen} alt='' className='menu-button' />
           </button>
         </div>
 
         <div className='hidden lg:block'>
-          <button>login</button>
-          <button>Signup</button>
+          <button className="mr-2 opacity-75">login</button>
+          <button className="border-2 border-black opacity-75 px-6 py-2 rounded-2xl">Register</button>
         </div>
       </header>
       <section className='flex flex-col-reverse py-20 md:grid md:gap-10 md:grid-cols-2 md:place-items-center max-w-4xl lg:max-w-5xl md:mx-auto'>

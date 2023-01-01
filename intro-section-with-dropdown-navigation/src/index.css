@@ -38,3 +38,33 @@ li {
   top: 5rem;
   z-index: 99;
 }
+
+@media (min-width: 1024px) {
+  .navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: auto;
+    padding: 0;
+    z-index: auto;
+  }
+
+  .navbar.open {
+    top: 0;
+    background-color: transparent;
+    z-index: auto;
+  }
+
+  .navbar div {
+    @apply mr-10;
+  }
+
+  .navbar div ul {
+    position: absolute;
+    /* width: 12rem; */
+  }
+}
