@@ -4,10 +4,58 @@ import audiophile from "./images/client-audiophile.svg";
 import databiz from "./images/client-databiz.svg";
 import maker from "./images/client-maker.svg";
 import meet from "./images/client-meet.svg";
+import logo from "./images/logo.svg";
+import chevronDown from "./images/icon-arrow-down.svg";
+import chevronUp from "./images/icon-arrow-up.svg";
+import menueOpen from "./images/icon-menu.svg";
+import { useState } from "react";
 
 function App() {
+  const [click, setClick] = useState(false);
+
+  const handleOnClick = () => {
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("open");
+  };
   return (
     <>
+      <header className='p-5 flex items-center justify-between'>
+        <div onClick={handleOnClick}>
+          <img src={logo} alt='logo image' />
+          <nav className='navbar'>
+            <div>
+              <button onClick={handleOnClick}>
+                Features <img src={chevronDown} alt='' />
+              </button>
+            </div>
+
+            <div>
+              <button>
+                Company <img src={chevronUp} alt='' />
+              </button>
+            </div>
+
+            <div>
+              <button>Careers</button>
+            </div>
+
+            <div>
+              <button>About</button>
+            </div>
+          </nav>
+        </div>
+
+        <div className=''>
+          <button>
+            <img src={menueOpen} alt='' />
+          </button>
+        </div>
+
+        <div className='hidden lg:block'>
+          <button>login</button>
+          <button>Signup</button>
+        </div>
+      </header>
       <section className='flex flex-col-reverse py-20 md:grid md:gap-10 md:grid-cols-2 md:place-items-center max-w-4xl lg:max-w-5xl md:mx-auto'>
         <article className='text-center mt-10 md:mt-0 md:text-left px-5 xl:px-0'>
           <h1 className='font-bold text-4xl lg:text-6xl mb-5 xl:text-7xl'>
