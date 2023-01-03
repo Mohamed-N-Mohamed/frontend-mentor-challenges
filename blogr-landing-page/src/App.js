@@ -1,11 +1,13 @@
-
-
+import Header from "./components/Header";
+import Showcase from "./components/Showcase";
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
+      <Header />
+      <Showcase />
 
-Product
+      {/* Product
 
 Overview
 Pricing
@@ -79,9 +81,7 @@ Connect
 
 Contact
 Newsletter
-LinkedIn
-
-  
+LinkedIn */}
     </div>
   );
 }
