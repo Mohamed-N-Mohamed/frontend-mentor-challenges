@@ -22,10 +22,16 @@ img {
 ul {
   list-style-type: none;
 }
+a {
+  text-decoration: none;
+}
 
 p {
   font-size: 16px;
   line-height: 1.6;
+}
+ul {
+  list-style-type: none;
 }
 
 h1,
@@ -35,6 +41,28 @@ h4,
 h5,
 h6 {
   color: var(--Very-dark-blue);
+}
+
+.navbar {
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  margin: auto;
+  padding: 50px 0;
+}
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.navbar ul li {
+  margin: 10px 0;
 }
 
 .showcase {
@@ -56,4 +84,27 @@ h6 {
 
   color: hsl(355, 100%, 74%);
   font-weight: bold;
+}
+
+
+@media (min-width: 768px) {
+  .navbar {
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+    top: 0;
+    left: 0;
+    transform: translateX(0%);
+  }
+
+  .navbar ul {
+    flex-direction: row;
+  }
+  .navbar ul li {
+    color: white;
+    margin: 0;
+    
+  }
 }

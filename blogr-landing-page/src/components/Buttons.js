@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const Buttons = () => {
   return (
     <div>
-      <url>
+      <ul>
         <li>Login</li>
         <li>Sign Up</li>
-      </url>
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Buttons
+export default Buttons;
