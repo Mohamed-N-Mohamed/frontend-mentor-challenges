@@ -1,3 +1,5 @@
+
+import Art from "./components/Art";
 import Design from "./components/Design";
 import Footer from "./components/Footer";
 import Free from "./components/Free";
@@ -10,6 +12,7 @@ function App() {
       <Header />
       <Showcase />
       <Design />
+      <Art />
       <Free />
       <Footer />
 

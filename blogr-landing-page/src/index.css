@@ -13,6 +13,7 @@ body {
   font-family: "Overpass", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 img {
@@ -77,14 +78,25 @@ h6 {
 }
 
 .showcase .overlay {
-  background: url('./images/bg-pattern-intro-mobile.svg') no-repeat center/cover;
+  background: url("./images/bg-pattern-intro-mobile.svg") no-repeat center/cover;
   min-height: 400px;
 }
 
 .btn-light {
-
   color: hsl(355, 100%, 74%);
   font-weight: bold;
+}
+
+.art {
+  background: linear-gradient(90deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  border-radius: 0 100px 0 100px;
+  margin-bottom: 100px;
+  margin: 100px 0 50px;
+}
+
+.art .art-image {
+  position: absolute;
+  top: -20%;
 }
 
 .footer {
@@ -96,13 +108,12 @@ h6 {
   color: hsl(240, 2%, 79%);
 }
 
-
 @media (min-width: 768px) {
   .navbar {
     position: relative;
     background-color: transparent;
     box-shadow: none;
-    width:  768;
+    width: 768;
     padding: 0;
     top: 0;
     left: 0;
@@ -115,6 +126,9 @@ h6 {
   .navbar ul li {
     color: white;
     margin: 0;
-    
+  }
+
+  .art .art-image {
+    width:500px
   }
 }
