@@ -4,7 +4,7 @@ export const data = [
   {
     id: uuidv4(),
     title: "Products",
-    link: ["Overview", "Pricing", "Marketplace, Features, Intergrations"],
+    link: ["Overview", "Pricing", "Marketplace", "Features", "Intergrations"],
   },
 
   {

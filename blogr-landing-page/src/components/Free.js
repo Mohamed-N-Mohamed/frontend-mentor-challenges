@@ -4,8 +4,14 @@ import mobile from "../images/illustration-laptop-mobile.svg";
 const Free = () => {
   return (
     <div>
-      <section className='py-20 px-5'>
-        <div className='text-center flex flex-col-reverse md:grid md:grid-cols-2 md:gap-5 md:items-center md:text-left md:max-w-7xl md:mx-auto'>
+      <section className='pb-20 px-5'>
+        <div className='text-center flex flex-col md:grid md:grid-cols-2 md:gap-5 md:items-center md:text-left md:max-w-7xl md:mx-auto'>
+          <div>
+            <picture className=''>
+              <source media='(min-width: 768px)' srcSet={desktop} />
+              <img src={mobile} alt='' className='w-full mx-auto block mt-10' />
+            </picture>
+          </div>
           <div className='mt-10'>
             <h3 className='text-2xl mt-10 mb-5'>Free, open, simple</h3>
             <p>
@@ -24,13 +30,6 @@ const Free = () => {
               that makes customization and deployment a breeze, but capable of
               producing even the most complicated sites.
             </p>
-          </div>
-
-          <div>
-            <picture className=''>
-              <source media='(min-width: 768px)' srcSet={desktop} />
-              <img src={mobile} alt='' className='w-full mx-auto block mt-10' />
-            </picture>
           </div>
         </div>
       </section>
