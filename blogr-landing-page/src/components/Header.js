@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header className='absolute p-5 flex items-center justify-between w-full'>
-      <div>
+      <div className='md:mr-5'>
         <img src={logo} alt='logo' />
       </div>
 
