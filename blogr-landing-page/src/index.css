@@ -41,6 +41,7 @@ h4,
 h5,
 h6 {
   color: var(--Very-dark-blue);
+  font-weight: bold;
 }
 
 .navbar {
@@ -92,7 +93,7 @@ h6 {
     position: relative;
     background-color: transparent;
     box-shadow: none;
-    width: auto;
+    width:  768;
     padding: 0;
     top: 0;
     left: 0;

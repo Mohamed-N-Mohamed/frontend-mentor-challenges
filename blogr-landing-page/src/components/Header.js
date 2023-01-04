@@ -10,15 +10,13 @@ import Menue from "./Menue";
 const Header = () => {
   const [links, setLinks] = useState(data);
   const [open, setOpen] = useState(false);
-  const [screen, setScreen] = useState(768)
-
+  const [screen, setScreen] = useState(768);
 
   useEffect(() => {
-    if(window.innerWidth > screen ){
-      setOpen(true)
+    if (window.innerWidth > screen) {
+      setOpen(true);
     }
-
-  }, [])
+  }, []);
 
   console.log(links);
 
@@ -29,7 +27,7 @@ const Header = () => {
       </div>
 
       {open && (
-        <nav className='navbar md:flex '>
+        <nav className='navbar md:flex md:justify-between'>
           <ul className=''>
             {links.map(({ id, title, links }) => (
               <li key={id}>{title}</li>
