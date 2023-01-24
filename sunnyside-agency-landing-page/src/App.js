@@ -1,6 +1,7 @@
 import Design from "./components/Design";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Testimonials from "./components/Testimonials";
 import Transform from "./components/Transform";
 
 function App() {
@@ -9,7 +10,9 @@ function App() {
       <Navbar />
       <Hero />
       <Transform />
-      <Design />
+      {/*Design page needs to be fixed */}
+      {/* <Design /> */}
+      <Testimonials />
     </div>
   );
 }
