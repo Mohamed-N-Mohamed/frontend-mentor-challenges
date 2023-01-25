@@ -23,7 +23,7 @@ const Transform = () => {
 
         <div className='tranform-img  md:w-[50%]'>
           <picture>
-            <source media='(min-width: 768px)' srcset={transformDesktop} />
+            <source media='(min-width: 768px)' srcSet={transformDesktop} />
             <img src={transformMobile} alt='' className='w-full' />
           </picture>
         </div>
@@ -32,7 +32,7 @@ const Transform = () => {
       <div className='stand md:flex md:justify-center md:items-center md:w-full'>
         <div className='stand-img  md:w-[50%]'>
           <picture>
-            <source media='(min-width: 768px)' srcset={standDesktop} />
+            <source media='(min-width: 768px)' srcSet={standDesktop} />
             <img src={standMobile} alt='' className='w-full' />
           </picture>
         </div>
