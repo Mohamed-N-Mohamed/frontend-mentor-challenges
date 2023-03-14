@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Pink: hsl(322, 100%, 66%);
+  --Very-Pale-Cyan: hsl(193, 100%, 96%);
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Grayish-Blue: hsl(208, 11%, 55%);
+}
+
+body {
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Open Sans", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+.btn {
+  display: block;
+  background-color: var(--Pink);
+  border: none;
+  padding: 12px 50px;
+  border-radius: 60px;
+  margin: 0 auto;
+}
+
+/*Header*/
+.header {
+  background-color: var(--Very-Pale-Cyan);
+  background-image: url("../images/bg-hero-mobile.svg");
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.header-logo {
+  width: 100px;
+}
+.header-signup-button {
+  display: inline-block;
+  background-color: #fff;
+  padding: 0.55rem 1.9rem;
+  border: none;
+  border-radius: 60px;
+  color: black;
+  font-weight: 600;
+}
+
+.header-content {
+  margin-top: 30px;
+}
+.header-content h1 {
+  font-size: 1.2rem;
+  padding: 1.2rem 0;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  padding: 1rem;
+}
+.header-content p {
+  text-align: center;
+  padding: 1rem;
+  font-size: 13px;
+}
+.header-content img {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .header {
+    background-image: url("../images/bg-hero-desktop.svg");
+  }
+  .header-content h1 {
+    font-size: 1.7rem;
+  }
+  .flex {
+    display: flex;
+
+  }
+  .header-content h1{
+    text-align: left;
+    padding: 0 1rem;
+  }
+  .header-content p {
+    text-align: left;
+  }
+  .btn{
+    margin: 0
+  }
+}
