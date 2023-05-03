@@ -24,6 +24,10 @@ ul {
   list-style-type: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .p1 {
   padding: 1rem;
 }
@@ -103,13 +107,17 @@ img {
 .showcase {
   display: flex;
   flex-direction: column;
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: dense;
+  background-color: var(--White); */
 }
 
 .show-background-img {
   background-image: url("/images/bg-intro-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-position: center bottom;  */
+  background-position: center bottom; 
   width: 100%;
 }
 .bg-img {
@@ -120,9 +128,24 @@ img {
   height: 424px;
 }
 
+.background-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-img1 {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  width: 80%;
+  grid-column-end: -1 
+}
+
 .showcase-text {
   padding-top: 1rem;
   text-align: center;
+  grid-column: 2
 }
 
 .showcase-header {
@@ -170,6 +193,13 @@ img {
     height: 500px;
     background-position: top center;
     width: 50%;
+  }
+
+  .bg-img1 {
+    position: absolute;
+    top: -1rem;
+    right: 5rem;
+    width: 70%;
   }
   .showcase-text {
     text-align: left;
