@@ -113,6 +113,15 @@ img {
   background-color: var(--White); */
 }
 
+
+/*lastest articles */
+.latest-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 .show-background-img {
   background-image: url("/images/bg-intro-mobile.svg");
   background-repeat: no-repeat;
