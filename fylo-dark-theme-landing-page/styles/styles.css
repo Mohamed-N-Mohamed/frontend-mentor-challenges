@@ -1,0 +1,87 @@
+:root {
+  --main-background: hsl(218, 28%, 13%);
+  --foter-background: hsl(216, 53%, 9%);
+  --testimonials-background: hsl(219, 30%, 18%);
+  --email-background: hsl(217, 28%, 15%);
+  --main-text-color: hsl(0, 0%, 100%);
+  --cyan: hsl(176, 68%, 64%);
+  --blue: hsl(198, 60%, 50%);
+  --red: hsl(0, 100%, 63%);
+}
+
+body {
+  background-color: var(--main-background);
+  font-family: "Open Sans", sans-serif;
+  color: var(--main-text-color);
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 90%;
+  width: 1200px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+/* img {
+  width: 100%;
+} */
+
+/*navbar */
+.header {
+  width: 100%;
+  height: 120px;
+  margin-top: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.navbar-logo img {
+  width: 80px;
+}
+.navbar-links {
+  display: flex;
+  gap: 1.2rem;
+}
+.navbar-links a {
+  font-size: 0.875rem;
+}
+
+/*showcase */
+.showcase {
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.showcase-image img {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+.showcase-content {
+  /* width: 50%; */
+}
+
+@media (min-width: 960px) {
+  .navbar {
+    justify-content: space-between;
+  }
+  .showcase-image img {
+    width: 40%;
+  }
+}
